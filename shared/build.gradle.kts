@@ -25,6 +25,8 @@ kotlin {
             // put your Multiplatform dependencies here
         }
     }
+    // maybe need add this task to rebuild
+    task("testClasses")
 }
 
 android {

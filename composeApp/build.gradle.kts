@@ -38,14 +38,18 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material)
+            implementation(compose.material3)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
             implementation(libs.androidx.lifecycle.viewmodel)
             implementation(libs.androidx.lifecycle.runtime.compose)
+            implementation(libs.androidx.compose.navigation)
             implementation(projects.shared)
         }
     }
+    // maybe need add this task to rebuild
+    task("testClasses")
 }
 
 android {
@@ -83,5 +87,9 @@ android {
     dependencies {
         debugImplementation(compose.uiTooling)
     }
+}
+dependencies {
+    implementation(libs.androidx.material3.android)
+    implementation(libs.androidx.foundation.android)
 }
 
